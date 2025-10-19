@@ -14,6 +14,7 @@ typedef struct    s_list
 
 #include <stdlib.h>
 #include "../libft/libft.h"
+#include <stdio.h>
 t_list *ft_lstnew(long content);
 void ft_lstadd_front(t_list **lst, t_list *new);
 void pop(t_list **head);
@@ -44,5 +45,7 @@ t_list *find_cheaper(t_list **stack_a);
 void rotate_a_to_top(t_list **stack_a, int index);
 void rotate_b_to_top(t_list **stack_b, int target);
 void sort_a_end(t_list **stack_a);
+void push_back_to_a(t_list **stack_a, t_list **stack_b);
+void find_target_a(t_list **stack_a, t_list **stack_b);
 
 #endif
