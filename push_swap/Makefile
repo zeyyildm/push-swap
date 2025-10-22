@@ -1,6 +1,6 @@
 NAME = push_swap
 
-SRCS = push_swap_utils.c push_swap.c push_swap_parse.c push_swap_errors.c turk_algo.c
+SRCS = push_swap_utils.c push_swap.c push_swap_parse.c push_swap_errors.c turk_algo.c swap_operations.c rotate_operations.c r_rotate_operations.c find.c push_operations.c rotate_top.c find_target.c
 
 
 OBJS = $(SRCS:.c=.o)

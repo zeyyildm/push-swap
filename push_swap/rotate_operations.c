@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_errors.c                                 :+:      :+:    :+:   */
+/*   rotate_operations.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zeyildir <zeyildir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 16:56:50 by zeyildir          #+#    #+#             */
-/*   Updated: 2025/10/22 18:10:23 by zeyildir         ###   ########.fr       */
+/*   Created: 2025/10/22 17:15:12 by zeyildir          #+#    #+#             */
+/*   Updated: 2025/10/22 18:11:56 by zeyildir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	is_duplicate(long *n, int counter)
+void	ra(t_list **stack_a)
 {
-	int	i;
-	int	j;
+	t_list	*head;
 
-	i = 0;
-	while (i < counter)
-	{
-		j = i + 1;
-		while (j < counter)
-		{
-			if (n[i] == n[j])
-			{
-				write(2, "Error\n", 6);
-				exit(1);
-			}
-			j++;
-		}
-		i++;
-	}
+	head = (*stack_a);
+	pop(stack_a);
+	ft_lstadd_back(stack_a, head);
+	printf("ra\n");
+}
+
+void	rb(t_list **stack_b)
+{
+	t_list	*head;
+
+	head = (*stack_b);
+	pop(stack_b);
+	ft_lstadd_back(stack_b, head);
+	printf("rb\n");
 }
